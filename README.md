@@ -2,6 +2,9 @@
   <h1>Realtime Depth Estimation In Android With MiDaS</h1>
 </div>
 
+![depth image sample](repo_images/depth_sample.jpg)
+![camera sample](repo_images/rgb_sample.jpg)
+
 * [Official MiDaS GitHub repo](https://github.com/isl-org/MiDaS)
 * [TFLite model on TensorFlow Hub](https://tfhub.dev/intel/midas/v2_1_small/1)
 
@@ -17,7 +20,17 @@ The following features are included in the project,
 *Android* friendly manner.
 4. Works for both front and rear camera and also in portrait and landscape orientations.
 
-<script src="https://gist.github.com/shubham0204/94c53703eff4e2d4ff197d3bc8de497f.js"></script>
+### Project info:
+
+```
+compileSdk 30
+applicationId "com.shubham0204.ml.depthestimation"
+minSdk 23
+targetSdk 30
+androidGradlePluginVersion 7.0.0
+gradlePluginVersion 7.0.2
+```
+
 
 ## Citation
 
