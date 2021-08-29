@@ -22,6 +22,8 @@ import java.io.File
 import java.io.FileOutputStream
 import android.graphics.Bitmap
 import android.graphics.BitmapFactory
+import android.renderscript.Allocation
+import android.renderscript.ScriptIntrinsicYuvToRGB
 
 // Helper class for operations on Bitmaps
 class BitmapUtils {
@@ -61,7 +63,6 @@ class BitmapUtils {
         }
 
 
-
         fun byteBufferToBitmap( imageArray : FloatArray , imageDim : Int ) : Bitmap {
             val pixels = imageArray.map { it.toInt() }.toIntArray()
             val bitmap = Bitmap.createBitmap(imageDim, imageDim, Bitmap.Config.RGB_565 );
@@ -90,7 +91,7 @@ class BitmapUtils {
             uBuffer.get(nv21, ySize + vSize, uSize)
             val yuvImage = YuvImage(nv21, ImageFormat.NV21, image.width, image.height, null)
             val out = ByteArrayOutputStream()
-            yuvImage.compressToJpeg(Rect(0, 0, yuvImage.width, yuvImage.height), 50, out)
+            yuvImage.compressToJpeg(Rect(0, 0, yuvImage.width, yuvImage.height), 100, out)
             val yuv = out.toByteArray()
             return rotateBitmap( BitmapFactory.decodeByteArray(yuv, 0, yuv.size) , rotationDegrees.toFloat() )
         }

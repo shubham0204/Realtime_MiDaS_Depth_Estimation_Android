@@ -1,7 +1,45 @@
 <div align="center">
-  <h1>Realtime Depth Estimation In Android With MiDAS</h1>
+  <h1>Realtime Depth Estimation In Android With MiDaS</h1>
 </div>
 
+* [Official MiDaS GitHub repo](https://github.com/isl-org/MiDaS)
+* [TFLite model on TensorFlow Hub](https://tfhub.dev/intel/midas/v2_1_small/1)
+
+The repository contains an Android project which uses the [MiDaS](https://github.com/isl-org/MiDaS) model to perform monocular
+depth estimation. You can find the official Android example here -> https://github.com/isl-org/MiDaS/tree/master/mobile/android
+
+This project uses the TFLite model from the [MiDaS's TensorFlow Hub repo](https://tfhub.dev/intel/midas/v2_1_small/1).
+The following features are included in the project,
+
+1. Well documented code with links to SO answers wherever required.
+2. Uses latest APIs like [CameraX](https://developer.android.com/training/camerax) and [Kotlin Coroutines](https://developer.android.com/kotlin/coroutines).
+3. No use of heavy packages like OpenCV to process and display the depth map. The application is coded in a
+*Android* friendly manner.
+4. Works for both front and rear camera and also in portrait and landscape orientations.
+
+<script src="https://gist.github.com/shubham0204/94c53703eff4e2d4ff197d3bc8de497f.js"></script>
+
+## Citation
+
+```
+@article{DBLP:journals/corr/abs-1907-01341,
+  author    = {Katrin Lasinger and
+               Ren{\'{e}} Ranftl and
+               Konrad Schindler and
+               Vladlen Koltun},
+  title     = {Towards Robust Monocular Depth Estimation: Mixing Datasets for Zero-Shot
+               Cross-Dataset Transfer},
+  journal   = {CoRR},
+  volume    = {abs/1907.01341},
+  year      = {2019},
+  url       = {http://arxiv.org/abs/1907.01341},
+  archivePrefix = {arXiv},
+  eprint    = {1907.01341},
+  timestamp = {Mon, 08 Jul 2019 14:12:33 +0200},
+  biburl    = {https://dblp.org/rec/journals/corr/abs-1907-01341.bib},
+  bibsource = {dblp computer science bibliography, https://dblp.org}
+}
+```
 
 ## License
 

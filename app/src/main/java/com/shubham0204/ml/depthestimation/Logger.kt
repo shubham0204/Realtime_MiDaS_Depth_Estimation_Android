@@ -16,6 +16,7 @@ package com.shubham0204.ml.depthestimation
 
 import android.util.Log
 
+// Utility class to log messages
 class Logger {
 
     companion object {

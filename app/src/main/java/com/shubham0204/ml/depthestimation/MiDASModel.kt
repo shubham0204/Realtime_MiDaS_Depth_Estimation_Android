@@ -84,6 +84,7 @@ class MiDASModel( context: Context ) {
             }
         }
         interpreter = Interpreter(FileUtil.loadMappedFile( context, modelFileName ) , interpreterOptions )
+        Logger.logInfo( "TFLite interpreter created." )
     }
 
 
@@ -93,13 +94,13 @@ class MiDASModel( context: Context ) {
 
 
     private fun run( inputImage : Bitmap ): Bitmap {
-        val t1 = System.currentTimeMillis()
-
         // Note: The model takes in a RGB image ( of shape ( 256 , 256 , 3 ) ) and
         // outputs a depth map of shape ( 256 , 256 , 1 )
         // Create a tensor of shape ( 1 , inputImageDim , inputImageDim , 3 ) from the given Bitmap.
         // Then perform operations on the tensor as described by `inputTensorProcessor`.
         var inputTensor = TensorImage.fromBitmap( inputImage )
+
+        val t1 = System.currentTimeMillis()
         inputTensor = inputTensorProcessor.process( inputTensor )
 
         // Output tensor of shape ( 256 , 256 , 1 ) and data type float32
@@ -111,11 +112,11 @@ class MiDASModel( context: Context ) {
 
         // Perform operations on the output tensor as described by `outputTensorProcessor`.
         outputTensor = outputTensorProcessor.process( outputTensor )
-        // Create a Bitmap from the depth map which will be displayed on the screen.
-        val outputBitmap = BitmapUtils.byteBufferToBitmap( outputTensor.floatArray , inputImageDim )
 
-        Log.i( "Performance" , "MiDAS Inference Speed in ms : ${System.currentTimeMillis() - t1}")
-        return outputBitmap
+        Logger.logInfo( "MiDaS inference speed: ${System.currentTimeMillis() - t1}")
+
+        // Create a Bitmap from the depth map which will be displayed on the screen.
+        return BitmapUtils.byteBufferToBitmap( outputTensor.floatArray , inputImageDim )
     }
 
 
