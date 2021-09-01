@@ -7,6 +7,7 @@
 
 * [Official MiDaS GitHub repo](https://github.com/isl-org/MiDaS)
 * [TFLite model on TensorFlow Hub](https://tfhub.dev/intel/midas/v2_1_small/1)
+* [APK for this project](https://github.com/shubham0204/Realtime_MiDaS_Depth_Estimation_Android/tree/master/app.apk)
 
 The repository contains an Android project which uses the [MiDaS](https://github.com/isl-org/MiDaS) model to perform monocular
 depth estimation. You can find the official Android example here -> https://github.com/isl-org/MiDaS/tree/master/mobile/android
