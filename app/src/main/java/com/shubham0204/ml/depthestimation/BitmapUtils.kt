@@ -20,10 +20,6 @@ import android.media.Image
 import java.io.ByteArrayOutputStream
 import java.io.File
 import java.io.FileOutputStream
-import android.graphics.Bitmap
-import android.graphics.BitmapFactory
-import android.renderscript.Allocation
-import android.renderscript.ScriptIntrinsicYuvToRGB
 
 // Helper class for operations on Bitmaps
 class BitmapUtils {

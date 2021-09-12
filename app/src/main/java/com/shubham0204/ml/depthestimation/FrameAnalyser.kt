@@ -14,12 +14,7 @@
  */
 package com.shubham0204.ml.depthestimation
 
-import android.content.Context
 import android.graphics.Bitmap
-import android.renderscript.Allocation
-import android.renderscript.RenderScript
-import android.renderscript.ScriptIntrinsicResize
-import android.util.Log
 import android.view.View
 import androidx.camera.core.ImageAnalysis
 import androidx.camera.core.ImageProxy

@@ -15,17 +15,11 @@
 package com.shubham0204.ml.depthestimation
 
 import android.content.Context
-import android.graphics.*
-import android.graphics.drawable.BitmapDrawable
-import android.graphics.drawable.Drawable
+import android.graphics.Bitmap
+import android.graphics.Canvas
 import android.util.AttributeSet
 import android.view.SurfaceHolder
 import android.view.SurfaceView
-import kotlin.collections.ArrayList
-import android.graphics.Bitmap
-import android.renderscript.*
-import android.util.Log
-import android.view.WindowMetrics
 
 // Overlay to display the depth map over the `PreviewView`.
 // See activity_main.xml

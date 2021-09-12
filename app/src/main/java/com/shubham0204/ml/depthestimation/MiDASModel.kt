@@ -17,7 +17,6 @@ package com.shubham0204.ml.depthestimation
 import android.content.Context
 import android.graphics.Bitmap
 import android.os.Build
-import android.util.Log
 import org.tensorflow.lite.DataType
 import org.tensorflow.lite.Interpreter
 import org.tensorflow.lite.gpu.CompatibilityList
