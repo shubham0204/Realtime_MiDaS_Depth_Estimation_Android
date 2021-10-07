@@ -2,6 +2,9 @@
 .gradle
 /local.properties
 /.idea/caches
+/.idea
+/app/src/androidTest
+/app/src/test
 /.idea/libraries
 /.idea/modules.xml
 /.idea/workspace.xml
